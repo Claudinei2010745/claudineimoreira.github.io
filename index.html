@@ -38,16 +38,34 @@ nav a:hover {
     color: #00bcd4;
 }
 
-/* BANNER */
-.banner {
+/* BANNER COM VÍDEO */
+.banner-video {
+    position: relative;
     height: 100vh;
-    background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
+    overflow: hidden;
+}
+
+.banner-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.banner-video::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.banner-texto {
+    position: relative;
+    z-index: 2;
+    color: white;
     padding-left: 60px;
 }
 
