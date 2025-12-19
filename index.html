@@ -38,18 +38,47 @@ nav a:hover {
     color: #00bcd4;
 }
 
-/* BANNER COM VÍDEO – TEMA AZUL BI */
+/* BANNER COM VÍDEO */
+.banner-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .banner-video video {
-    filter: brightness(0.65) contrast(1.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 .banner-video::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.6);
 }
 
+.banner-texto {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding-left: 60px;
+    max-width: 700px;
+}
+
+.banner-texto h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner-texto p {
+    font-size: 20px;
+    opacity: 0.9;
+}
 
 /* SEÇÕES */
 section {
@@ -85,7 +114,7 @@ html {
 <section id="home" class="banner-video">
 
     <video autoplay muted loop playsinline preload="auto">
-        <source src="./video-dados.mp4" type="video/mp4">
+        <source src="video-dados.mp4" type="video/mp4">
     </video>
 
     <div class="banner-texto">
@@ -128,7 +157,6 @@ html {
     <h2>Contato</h2>
     <p>Email | LinkedIn | GitHub</p>
 </section>
-
 
 </body>
 </html>
