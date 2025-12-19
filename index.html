@@ -38,11 +38,12 @@ nav a:hover {
     color: #00bcd4;
 }
 
-/* BANNER COM VÍDEO */
+/* BANNER COM VÍDEO – TEMA AZUL BI */
 .banner-video {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: #0b1c2d;
 }
 
 .banner-video video {
@@ -53,32 +54,44 @@ nav a:hover {
     min-height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    filter:
+        brightness(0.55)
+        contrast(1.25)
+        saturate(1.15);
 }
 
+/* Overlay azul BI */
 .banner-video::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(
+        120deg,
+        rgba(3, 22, 45, 0.85),
+        rgba(0, 76, 153, 0.65)
+    );
 }
 
+/* TEXTO DO BANNER */
 .banner-texto {
     position: relative;
     z-index: 2;
-    color: white;
+    color: #eaf4ff;
     padding-left: 60px;
-    max-width: 700px;
+    max-width: 720px;
 }
 
 .banner-texto h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    margin-bottom: 12px;
+    font-weight: bold;
 }
 
 .banner-texto p {
     font-size: 20px;
-    opacity: 0.9;
+    color: #9fdcff;
 }
+
 
 /* SEÇÕES */
 section {
