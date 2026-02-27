@@ -5,15 +5,8 @@
 <title>Claudinei Moreira | Analista de Dados</title>
 
 <style>
-section {
-    min-height: 100vh;
-    padding: 120px 60px;
-}
-ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +14,16 @@ ul {
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* MENU */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: #0f172a;
     padding: 15px 40px;
     z-index: 1000;
 }
@@ -38,16 +35,17 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #00bcd4;
+    color: #38bdf8;
 }
 
-/* BANNER COM VÍDEO */
+/* BANNER */
 .banner-video {
     position: relative;
     height: 100vh;
@@ -68,7 +66,7 @@ nav a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(15, 23, 42, 0.8);
 }
 
 .banner-texto {
@@ -77,33 +75,70 @@ nav a:hover {
     color: white;
     padding-left: 60px;
     max-width: 700px;
+    top: 40%;
+    transform: translateY(-40%);
 }
 
 .banner-texto h1 {
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .banner-texto p {
     font-size: 20px;
-    opacity: 0.9;
+    color: #38bdf8;
 }
 
 /* SEÇÕES */
 section {
-    padding: 150px 60px;
-    scroll-margin-top: 120px;
+    padding: 100px 60px;
+    scroll-margin-top: 80px;
 }
 
 section h2 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 20px;
+    color: #0f172a;
 }
 
-/* SCROLL SUAVE */
-html {
-    scroll-behavior: smooth;
+section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* PROJETOS */
+.card {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTATO */
+#contato a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+#contato a:hover {
+    color: #38bdf8;
+}
+
 </style>
 </head>
 
@@ -115,8 +150,7 @@ html {
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#projetos">Projetos</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#educacao">Educação</a>
+        <a href="#educacao">Formação</a>
         <a href="#contato">Contato</a>
     </nav>
 </header>
@@ -124,7 +158,7 @@ html {
 <!-- HOME -->
 <section id="home" class="banner-video">
 
-    <video autoplay muted loop playsinline preload="auto">
+    <video autoplay muted loop playsinline>
         <source src="video-dados.mp4" type="video/mp4">
     </video>
 
@@ -138,59 +172,69 @@ html {
 <!-- SOBRE -->
 <section id="sobre">
     <h2>Sobre</h2>
-<p>Analista de Dados em formação, com foco em Python, SQL e Power BI.
-<p>Tenho interesse em transformar dados em insights estratégicos</p>
-<p>para apoiar a tomada de decisão.
-
-</p>
+    <p>
+        Analista de Dados com experiência em extração, tratamento e visualização
+        de dados utilizando Python, SQL e Power BI.
+    </p>
+    <p>
+        Desenvolvimento de dashboards interativos, consultas SQL otimizadas e
+        análises exploratórias para geração de insights estratégicos.
+    </p>
+    <p>
+        Foco em transformar dados em decisões orientadas por resultados.
+    </p>
 </section>
 
 <!-- HABILIDADES -->
 <section id="habilidades">
-<h2>Habilidades</h2>
-<ul>
-<li>Python (Pandas, NumPy)</li>
-<li>SQL (MySQL)</li>
-<li>Power BI (DAX, modelagem de dados)</li>
-<li>Git e GitHub</li>
-</ul>
+    <h2>Habilidades Técnicas</h2>
+    <ul>
+        <li><strong>Linguagens:</strong> Python, SQL</li>
+        <li><strong>Ferramentas:</strong> Power BI, Excel, Git, MySQL</li>
+        <li><strong>Bibliotecas:</strong> Pandas, NumPy</li>
+        <li><strong>Conceitos:</strong> ETL, Modelagem de Dados, EDA</li>
+    </ul>
 </section>
+
+<!-- PROJETOS -->
 <section id="projetos">
-<h2>Projetos</h2>
-<p><strong>Análise de Vendas</strong> – Projeto em Python utilizando Pandas para tratamento e análise de dados.</p>
-<p><strong>Dashboard Comercial</strong> – Dashboard no Power BI com KPIs de vendas.</p>
-</section>
-<!-- EXPERIÊNCIA -->
-<section id="experiencia">
-    <h2>Experiência</h2>
-    <p>Sou graduado em Engenharia da Computação (conclusão em 2025) e venho me
-        <p>especializando em Desenvolvimento e Análise de Dados. Tenho experiência 
-        <p>com Pacote Office, Python com IA e automações, SQL, Power BI, criando 
-        <p>soluções que melhoram processos e oferecem insights para tomada de decisão. 
-        <p>Também estou estudando Inglês a três meses. Busco oportunidades como 
-        <p>Analista de Dados, onde eu possa aplicar minhas habilidades, 
-        aprender continuamente e contribuir para projetos de tecnologia e inovação.
+    <h2>Projetos</h2>
 
-</p>
+    <div class="card">
+        <h3>Análise de Vendas</h3>
+        <p>
+            Projeto em Python utilizando Pandas para limpeza, tratamento e análise
+            de dados comerciais, identificando padrões de faturamento.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Dashboard Comercial</h3>
+        <p>
+            Desenvolvimento de dashboard no Power BI com KPIs de vendas,
+            crescimento mensal e análise por categoria.
+        </p>
+    </div>
+
 </section>
 
-<!-- EDUCAÇÃO -->
+<!-- FORMAÇÃO -->
 <section id="educacao">
-    <h2>Educação</h2>
-    <p>Engenharia da Computação</p>
-    <p>Univesp</p>
+    <h2>Formação</h2>
+    <ul>
+        <li>Engenharia da Computação – Conclusão prevista em 2025</li>
+    </ul>
 </section>
 
 <!-- CONTATO -->
 <section id="contato">
-<h2>Contato</h2>
-<p>
-<a href="mailto:soco_ue@hotmail.com">Email</a> |
-<a href="https://www.linkedin.com/in/claudinei-moreira-a91040234" target="_blank">Linkedin</a> |
-<a href="https://github.com/Claudinei2010745" target="_blank">GitHub
-
-</a>
-</p>
+    <h2>Contato</h2>
+    <p>
+        <a href="mailto:soco_ue@hotmail.com">Email</a> |
+        <a href="SEU_LINK_LINKEDIN" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Claudinei2010745" target="_blank">GitHub</a>
+    </p>
 </section>
+
 </body>
 </html>
